@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with AI</title>
+</head>
+<body>
+    <h1>Chat with AI</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="user_input">Your Message:</label><br>
+        <input type="text" id="user_input" name="user_input"><br>
+        <input type="submit" value="Send">
+    </form>
+    {% if response %}
+        <p><strong>You:</strong> {{ user_input }}</p>
+        <p><strong>AI:</strong> {{ response }}</p>
+    {% endif %}
+</body>
+</html>
