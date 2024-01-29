@@ -6,12 +6,12 @@ client = openai.OpenAI(api_key=open_ai_key)
 
 # Create your views here.
 def home(request):
-    client.fine_tuning.jobs.create(
-        trainint_file="knowledge.pdf",
-        model="gpt-3.5-turbo",
-    )
+    # client.fine_tuning.jobs.create(
+    #     trainint_file="knowledge.pdf",
+    #     model="gpt-3.5-turbo",
+    # )
         
 
 
     context = {'data': "test returned data"}
-    return render(request, 'home.html')
+    return render(request, 'home.html', context)
