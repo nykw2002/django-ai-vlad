@@ -308,9 +308,9 @@ def create_fine_tuning_job(file_id):
         print(f"Error in creating fine-tuning job: {e}")
         return None
 
-if dataset_file_id:
-    fine_tuning_response = create_fine_tuning_job(dataset_file_id)
-    print(fine_tuning_response)
+# if dataset_file_id:
+#     fine_tuning_response = create_fine_tuning_job(dataset_file_id)
+#     print(fine_tuning_response)
 
 
 
