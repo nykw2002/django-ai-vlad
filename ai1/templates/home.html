@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+    
+{% block content %}
+    <div class="flex items-center justify-center mx-auto border bg-neutral-100 w-full h-full">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" value="sumarize the pdf" name="prompt" />
+            <button type="submit">Submit</button>
+        </form>
+        <div>
+            {{ data }}
+        </div>
+    </div>
+
+{% endblock %}
